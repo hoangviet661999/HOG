@@ -1,6 +1,6 @@
-from preprocessing import X_train, X_test, y_train, y_test, y_test_dict, _accuracy
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import classification_report
+from preprocessing import X_train, X_test, y_train, y_test, y_test_dict, _accuracy
 
 N_NEIGHBOR = 3
 

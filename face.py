@@ -11,7 +11,7 @@ def hog_face_to_points(rect):
 
 	return x1, y1, x2, y2
 
-image_path='images/train/kim jisoo/jisoo5.jpg'
+image_path='images/train/kim so huyn/sohuyn6.jpg'
 
 image = cv2.imread(image_path)
 
