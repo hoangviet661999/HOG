@@ -7,13 +7,11 @@ import numpy as np
 import dlib
 from sklearn.preprocessing import LabelEncoder
 
-
 i = 0
 BINS = 9
 BLOCK_SIZE = np.array([2,2])  # cell
 CELL_SIZE = np.array([10,10]) # pixel
-NORM = "L2"
-
+NORM = "L1"
 
 # tính tọa độ face
 def hog_face_to_points(rect):
@@ -50,7 +48,7 @@ def _preprocessing(fileType):
         if(len(ls)):
             [x1, y1, x2, y2] = ls
             logo = gray[y1:y2, x1:x2]
-            logo = cv2.resize(logo, (200, 200))
+            logo = cv2.resize(logo, (300, 300))
             # Khởi tạo HOG descriptor
             H = feature.hog(logo, orientations=BINS, pixels_per_cell=CELL_SIZE,
                             cells_per_block=BLOCK_SIZE, transform_sqrt=True, block_norm=NORM)

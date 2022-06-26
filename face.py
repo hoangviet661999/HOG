@@ -11,7 +11,7 @@ def hog_face_to_points(rect):
 
 	return x1, y1, x2, y2
 
-image_path='images/train/kim so huyn/sohuyn6.jpg'
+image_path='images/train/kim so huyn/sohuyn11.jpg'
 
 image = cv2.imread(image_path)
 
@@ -25,7 +25,6 @@ green_color = (0, 255, 0)
 
 for face in faces:
 	x1, y1, x2, y2 = hog_face_to_points(face)
-	cv2.rectangle(image, pt1=(x1,y1), pt2=(x2,y2), color=green_color, thickness=1)
 	logo = image[y1:y2, x1:x2]
 	logo = cv2.resize(logo, (200, 200))
 	cv2.imshow('image', logo)

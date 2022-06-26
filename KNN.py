@@ -16,7 +16,7 @@ y_train_pred = model.predict(X_train)
 y_test_pred = model.predict(X_test)
 
 uniq_labels = list(y_test_dict.values())
-print(classification_report(y_test, y_test_pred, target_names = uniq_labels))
+# print(classification_report(y_test, y_test_pred, target_names = uniq_labels))
 print("accuracy train : ",_accuracy(y_train_pred, y_train), "%")
 
 print("predict test :")

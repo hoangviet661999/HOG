@@ -2,7 +2,8 @@ from sklearn import svm
 from preprocessing import X_train, X_test, y_train, y_test, _accuracy
 
 KERNEL = "linear"
-model = svm.SVC(kernel = KERNEL)
+C = 0.1
+model = svm.SVC(kernel = KERNEL, C=C)
 model.fit(X_train, y_train)
 
 y_train_pred = model.predict(X_train)
