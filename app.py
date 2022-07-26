@@ -76,7 +76,7 @@ def extract_body(imagePath):
     print("[INFO] {}: {} original boxes, {} after suppression".format(
         filename, len(rects), len(pick)))
 
-    cv2.imshow("Before NMS", orig)
+    # cv2.imshow("Before NMS", orig)
     cv2.imshow("After NMS", image)
     cv2.waitKey(0)
 
